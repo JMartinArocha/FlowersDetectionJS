@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.18.0",
+    "@tensorflow/tfjs-converter": "^4.18.0"
+  },
+  "scripts": {
+    "convert": "tensorflowjs_converter --input_format=keras_saved_model --output_format=tfjs_layers_model ./models/flowers_model.keras ./models/js_model"
+  }
+}

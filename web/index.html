@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <title>Flower Type Detector</title>
+
+    <!-- Bootstrap CSS for a responsive layout -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles to ensure aesthetic alignment with the nature theme -->
+    <style>
+      body {
+        background-color: #f0f8ff; /* Soft blue background */
+        color: #333; /* Dark grey text for readability */
+      }
+
+      #resultado {
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+        color: #4caf50; /* Green text for results to match the nature theme */
+        margin-top: 20px;
+      }
+
+      .canvas-container {
+        margin: auto;
+        border: 2px solid #4caf50; /* Green border for canvas */
+        width: 400px;
+        background-color: #fff; /* White background for the canvas area */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container py-5 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="logo.webp"
+          alt="Flower Detection Logo"
+          width="120"
+          height="120"
+        />
+        <h1 class="display-5 fw-bold">Flower Type Detector</h1>
+        <p class="lead mb-4">
+          Identify various types of flowers using your webcam and TensorFlow.js.
+        </p>
+        <div class="canvas-container">
+          <video id="video" playsinline autoplay style="width: 100%"></video>
+          <canvas id="canvas" width="400" height="400"></canvas>
+          <div id="resultado">Waiting for camera...</div>
+          <button class="btn btn-success mt-4 mb-4" id="change-camera">
+            Change Camera
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap Bundle with Popper for responsive features -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- TensorFlow.js for model loading and prediction -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
